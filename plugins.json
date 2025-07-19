@@ -1,0 +1,23 @@
+[
+    {
+        "iconUrl": "http://10.16.100.244/images/logo-purple.svg",
+        "apiVersion": 1,
+        "repositoryUrl": "https://github.com/nehalDIU/nehal-CloudStream",
+        "fileSize": 2945,
+        "status": 1,
+        "language": "en",
+        "authors": [
+            "nehal"
+        ],
+        "tvTypes": [
+            "Movie",
+            "TvSeries",
+            "Anime"
+        ],
+        "version": 1,
+        "internalName": "ICC BDIX Provider",
+        "description": "ICC BDIX Provider for CloudStream - Access ICC BDIX streaming content",
+        "url": "https://raw.githubusercontent.com/nehalDIU/nehal-CloudStream/builds/ICC BDIX Provider.cs3",
+        "name": "ICC BDIX Provider"
+    }
+]
