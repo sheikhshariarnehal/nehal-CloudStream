@@ -1,0 +1,29 @@
+[build]
+  publish = "builds"
+  command = "echo 'No build needed - using GitHub Actions builds'"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+    Access-Control-Allow-Headers = "Content-Type"
+
+[[headers]]
+  for = "*.json"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "public, max-age=300"
+
+[[redirects]]
+  from = "/plugins"
+  to = "/plugins.json"
+  status = 200
+
+[[redirects]]
+  from = "/repository"
+  to = "/plugins.json"
+  status = 200

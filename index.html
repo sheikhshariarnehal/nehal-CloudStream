@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nehal's CloudStream Plugin Repository</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+        }
+        .plugin-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .url-box {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            word-break: break-all;
+            margin: 10px 0;
+        }
+        .copy-btn {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .copy-btn:hover {
+            background: #45a049;
+        }
+        .instructions {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎬 CloudStream Plugin Repository</h1>
+        
+        <div class="plugin-card">
+            <h2>📱 How to Install</h2>
+            <div class="instructions">
+                <p><strong>Step 1:</strong> Open CloudStream app</p>
+                <p><strong>Step 2:</strong> Go to Settings → Extensions → Add Repository</p>
+                <p><strong>Step 3:</strong> Copy and paste this URL:</p>
+                <div class="url-box">
+                    <span id="repoUrl">https://nehalDIU.github.io/nehal-CloudStream/</span>
+                    <button class="copy-btn" onclick="copyToClipboard('repoUrl')">Copy</button>
+                </div>
+                <p><strong>Step 4:</strong> Install the ICC BDIX Provider plugin</p>
+            </div>
+        </div>
+
+        <div class="plugin-card">
+            <h2>🔗 Available Plugins</h2>
+            <h3>ICC BDIX Provider</h3>
+            <p><strong>Author:</strong> nehal</p>
+            <p><strong>Description:</strong> Access ICC BDIX streaming content</p>
+            <p><strong>Supported Types:</strong> Movies, TV Series, Anime</p>
+            <p><strong>Status:</strong> ✅ Active</p>
+        </div>
+
+        <div class="plugin-card">
+            <h2>🌐 Alternative URLs</h2>
+            <p>If the main URL doesn't work, try these alternatives:</p>
+            
+            <p><strong>GitHub Pages:</strong></p>
+            <div class="url-box">
+                <span id="githubUrl">https://nehalDIU.github.io/nehal-CloudStream/plugins.json</span>
+                <button class="copy-btn" onclick="copyToClipboard('githubUrl')">Copy</button>
+            </div>
+
+            <p><strong>Raw GitHub:</strong></p>
+            <div class="url-box">
+                <span id="rawUrl">https://raw.githubusercontent.com/nehalDIU/nehal-CloudStream/master/plugins.json</span>
+                <button class="copy-btn" onclick="copyToClipboard('rawUrl')">Copy</button>
+            </div>
+        </div>
+
+        <div class="plugin-card">
+            <h2>📋 Direct JSON Access</h2>
+            <p><a href="plugins.json" style="color: #87CEEB;">View plugins.json</a></p>
+            <p><a href="https://github.com/nehalDIU/nehal-CloudStream" style="color: #87CEEB;">View Source Code</a></p>
+        </div>
+    </div>
+
+    <script>
+        function copyToClipboard(elementId) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                const btn = element.nextElementSibling;
+                const originalText = btn.textContent;
+                btn.textContent = 'Copied!';
+                btn.style.background = '#2196F3';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.background = '#4CAF50';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

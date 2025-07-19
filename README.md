@@ -1,8 +1,10 @@
-**⚠️ This is currently under development, dont use it yet if you're not comfortable with constantly merging new changes**
+# `Nehal's CloudStream Plugin Repository`
 
-# `Cloudstream3 Plugin Repo Template`
+Repository containing CloudStream plugins including the ICC BDIX Provider.
 
-Template for a [Cloudstream3](https://github.com/recloudstream) plugin repo
+## 🌐 Cloud Installation
+
+**Repository URL:** `https://nehalDIU.github.io/nehal-CloudStream/`
 
 **⚠️ Make sure you check "Include all branches" when using this template**
 
